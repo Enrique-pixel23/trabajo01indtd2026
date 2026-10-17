@@ -2,13 +2,11 @@
 title: "ProblemasT1"
 author: "Enrique León"
 date: "2026-10-17"
-output:
-  html_document:
-    df_print: paged
-editor_options:
-  markdown:
-    wrap: sentence
+format:
+  html: default
+  typst: default
 ---
+### Problema 1
 
 **Enunciado 1:** Una empresa de tecnología necesita seleccionar un nuevo proveedor para los microchips de su próximo producto estrella.
 Dispone de tres alternativas: - $d_1$: Proveedor A .
@@ -72,7 +70,7 @@ criterio.PuntoIdeal(tabla_proveedores, favorable = FALSE)
 
 ### Problema 2: Ampliación de un club de pádel local
 
-**Enunciado:** El gerente de un club de pádel está decidiendo qué tipo de pistas construir para la próxima temporada.
+**Enunciado 2:** El gerente de un club de pádel está decidiendo qué tipo de pistas construir para la próxima temporada.
 Tiene el presupuesto para una de estas dos alternativas: - $d_1$: Construir Pistas Cubiertas (Indoor).
 - $d_2$: Construir Pistas Descubiertas (Outdoor).
 

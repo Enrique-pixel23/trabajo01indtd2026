@@ -2,10 +2,11 @@
 title: "Enunciados"
 author: "Enrique León"
 date: "2026-10-17"
-output:
-  html_document:
-    df_print: paged
+format:
+  html: default
+  typst: default
 ---
+### Problema 1
 
 **Enunciado 1:**
 Una empresa de tecnología necesita seleccionar un nuevo proveedor para los microchips de su próximo producto estrella. Dispone de tres alternativas:
