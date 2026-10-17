@@ -1,1 +1,1 @@
-Este repositorio contiene el proyecto individual de Teoría de la Decisión bajo Incertidumbre. Incluye dos problemas (uno inventado relacionado con microchips y otro basado en una situación real enfocado al alquiler de pistal de pádel) resueltos con R
+Este repositorio contiene el proyecto individual de Teoría de la Decisión bajo Incertidumbre. Incluye dos problemas (uno inventado relacionado con microchips y otro basado en una situación real enfocado al alquiler de pistas de pádel) resueltos con R
