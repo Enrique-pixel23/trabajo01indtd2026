@@ -1,0 +1,56 @@
+---
+title: ""
+author: "Enrique León"
+date: "2026-10-17"
+format:
+  html: default
+  typst: default
+---
+### Problema 1
+
+**Enunciado 1:**
+Una empresa de tecnología necesita seleccionar un nuevo proveedor para los microchips de su próximo producto estrella. Dispone de tres alternativas:
+- $d_1$: Proveedor A .
+- $d_2$: Proveedor B .
+- $d_3$: Proveedor C .
+
+El impacto económico dependerá de la demanda que tenga el producto en el mercado, que se divide en tres posibles estados de la naturaleza:
+- $e_1$: Demanda Alta.
+- $e_2$: Demanda Media.
+- $e_3$: Demanda Baja.
+
+#### Preguntas sobre el Problema 1
+
+1.  En situación favorable (beneficios), el criterio de Wald recomienda la alternativa del Proveedor C ($d_3$) como la opción óptima.
+
+2.  Según el criterio Optimista en situación desfavorable (costos), la alternativa óptima es el Proveedor A ($d_1$) con un valor de 20.
+
+3.  El valor esperado para la alternativa del Proveedor C ($d_3$) según el criterio de Laplace en situación favorable es de aproximadamente 56.67.
+
+4.  Aplicando el criterio de Savage (arrepentimiento) en situación favorable, la alternativa óptima recomendada es el Proveedor B ($d_2$).
+
+5.  En situación desfavorable, el criterio de Wald (Minimax) minimiza el riesgo eligiendo el Proveedor C ($d_3$) con un valor óptimo de 60.
+
+
+
+### Problema 2: Ampliación de un club de pádel local 
+
+**Enunciado:** El gerente de un club de pádel está decidiendo qué tipo de pistas construir para la próxima temporada. Tiene el presupuesto para una de estas dos alternativas: - $d_1$: Construir Pistas Cubiertas (Indoor). - $d_2$: Construir Pistas Descubiertas (Outdoor).
+
+Los beneficios esperados (en miles de euros) dependerán de la climatología durante la temporada de invierno, que se clasifica en dos posibles estados de la naturaleza: - $e_1$: Invierno muy lluvioso. - $e_2$: Invierno seco y soleado.
+
+La estimación de beneficios es la siguiente: Si construyen pistas cubiertas y llueve, ganarán 50, y si hace seco ganarán 30 (la gente prefiere jugar fuera, pero mantienen clientela). Si construyen pistas descubiertas y llueve, tendrán pérdidas de -10 por cancelaciones, pero si hace seco ganarán 45.
+
+Al tratarse de beneficios, evaluaremos esta tabla en situación favorable utilizando la función conjunta de todos los criterios.
+
+#### Preguntas sobre el Problema 2
+
+1.  Según el criterio de Wald (pesimista), la alternativa óptima es construir Pistas Cubiertas ($d_1$).
+
+2.  Según el criterio Optimista, la alternativa óptima es construir Pistas Descubiertas ($d_2$) con un valor de 45.
+
+3.  El valor esperado para la alternativa de Pistas Cubiertas ($d_1$) según el criterio de Laplace es 40.
+
+4.  Aplicando el criterio de Savage, la alternativa óptima es construir Pistas Descubiertas ($d_2$).
+
+5.  En todos los criterios calculados por la función conjunta, la alternativa óptima recomendada es siempre construir Pistas Cubiertas ($d_1$).
