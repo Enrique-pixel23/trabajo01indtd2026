@@ -54,19 +54,29 @@ criterio.PuntoIdeal(tabla_proveedores, favorable = FALSE)
 #### Preguntas sobre el Problema 1
 
 1.  En situación favorable (beneficios), el criterio de Wald recomienda la alternativa del Proveedor C ($d_3$) como la opción óptima.
-    **Verdadero**
+    **Verdadero** 
+En situación favorable (beneficios), el criterio de Wald (Maximin) busca el peor escenario de cada alternativa (los mínimos: 20 para $d_1$, 10 para $d_2$ y 50 para $d_3$) y selecciona el valor más alto. Ese valor máximo es 50, correspondiente a la alternativa $d_3$.
+
 
 2.  Según el criterio Optimista en situación desfavorable (costos), la alternativa óptima es el Proveedor A ($d_1$) con un valor de 20.
-    **Falso**
+**Falso**
+En situación desfavorable (costos), el criterio Optimista busca el valor más bajo de toda la tabla (Minimin). El mínimo absoluto es 10, que corresponde a la alternativa $d_2$ (Proveedor B), y no 20 para $d_1$ como indica la afirmación.  
+
 
 3.  El valor esperado para la alternativa del Proveedor C ($d_3$) según el criterio de Laplace en situación favorable es de aproximadamente 56.67.
-    **Verdadero**
+**Verdadero**
+El criterio de Laplace en situación favorable calcula la media aritmética de cada alternativa. Para el Proveedor C ($d_3$), los valores son 60, 60 y 50, cuya media calculada por R es exactamente 56.66667 (aproximadamente 56.67). 
+
 
 4.  Aplicando el criterio de Savage en situación favorable, la alternativa óptima recomendada es el Proveedor B ($d_2$).
-    **Falso**
+**Falso**
+Aplicando el criterio de Savage en situación favorable (minimizar el arrepentimiento máximo), los valores máximos de penalización calculados son 30 para $d_1$, 40 para $d_2$ y 40 para $d_3$. Al buscar el mínimo de estos arrepentimientos, la alternativa óptima es $d_1$ con 30, no $d_2$.
+
 
 5.  En situación desfavorable, el criterio de Wald minimiza el riesgo eligiendo el Proveedor C ($d_3$) con un valor óptimo de 60.
-    **Verdadero**
+**Verdadero**
+En situación desfavorable, el criterio de Wald (Minimax) se pone en el peor caso de cada alternativa (sus valores máximos: 80 para $d_1$, 100 para $d_2$ y 60 para $d_3$) y elige el menor de ellos. El menor de esos máximos es efectivamente 60, correspondiente a $d_3$.
+
 
 ### Problema 2: Ampliación de un club de pádel local
 
@@ -103,16 +113,24 @@ criterio.Todos(tabla_padel, alfa = 0.5, favorable = TRUE)
 #### Preguntas sobre el Problema 2
 
 1.  Según el criterio de Wald , la alternativa óptima es construir Pistas Cubiertas ($d_1$).
-    **Verdadero**
+**Verdadero**
+El criterio de Wald selecciona la alternativa que garantiza el mejor resultado en el peor de los casos. El peor caso de $d_1$ es 30 y el de $d_2$ es -10; por tanto, escoge $d_1$ con un valor óptimo de 30. 
+
 
 2.  Según el criterio Optimista, la alternativa óptima es construir Pistas Descubiertas ($d_2$) con un valor de 45.
-    **Falso**
+**Falso**
+El criterio Optimista busca el valor máximo absoluto de toda la matriz. Como el valor máximo de $d_1$ es 50 y el de $d_2$ es 45, la alternativa óptima elegida por este criterio es $d_1$ con 50, y no $d_2$. 
 
 3.  El valor esperado para la alternativa de Pistas Cubiertas ($d_1$) según el criterio de Laplace es 40.
-    **Verdadero**
+**Verdadero**
+El criterio de Laplace calcula el valor esperado asumiendo equiprobabilidad. La media aritmética de la alternativa $d_1$ (50 y 30) arroja un valor exacto de 40.0, tal y como refleja la tabla resumen.
+
 
 4.  Aplicando el criterio de Savage, la alternativa óptima es construir Pistas Descubiertas ($d_2$).
-    **Falso**
+**Falso**
+Según la tabla conjunta para el criterio de Savage, el arrepentimiento máximo para $d_1$ es 15, mientras que para $d_2$ es 60. Al buscar minimizar dicho arrepentimiento, la alternativa ganadora es $d_1$, no $d_2$.
+
 
 5.  En todos los criterios calculados por la función conjunta, la alternativa óptima recomendada es siempre construir Pistas Cubiertas ($d_1$).
-    **Verdadero**
+**Verdadero**
+Observando la columna "Veces Optima" generada por la función criterio.Todos(), la alternativa $d_1$ (Pistas Cubiertas) resulta ganadora en los 6 criterios evaluados (Wald, Optimista, Hurwicz, Savage, Laplace y Punto Ideal), mientras que $d_2$ tiene 0 victorias. 
